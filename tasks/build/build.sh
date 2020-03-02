@@ -1,5 +1,9 @@
 #!/bin/bash
 
+terraform --version
+
+mvn --version
+
 set -euxo pipefail
 
 pushd graphql-src/
