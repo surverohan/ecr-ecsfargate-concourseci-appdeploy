@@ -5,13 +5,13 @@ echo "invoking upload to ecr process ......"
 pwd
 	ls
 	
-cp ../graphql-artifact/*.jar ../ci-pipeline/tasks/upload/graphql-poc.jar
+cp /graphql-artifact/*.jar /ci-pipeline/tasks/upload/graphql-poc.jar
 
 pwd
 	ls
 
     echo "****************** BUILDING  ******************"
-	cd  ../ci-pipeline/tasks/upload
+	cd  /ci-pipeline/tasks/upload
 	pwd
 	ls
     echo "BUILDING terraform init..."
