@@ -5,23 +5,24 @@ set -euxo pipefail
 pushd graphql-src/
 
 mvn package -Dmaven.repo.local=.m2
-cp target/*.jar ../build/graphql-poc.jar
-	pwd
-	ls
-	cd ../
+cp target/*.jar ../ci-pipeline/tasks/build/graphql-poc.jar
+#	pwd
+#	ls
+#	cd ../
 	
-	pwd
-	ls
-	cd ../
+#	pwd
+#	ls
+#	cd ../
 
-	pwd
-	ls
-    cd ../build/
-	pwd
-	ls
+#	pwd
+#	ls
+#    cd ../build/
+#	pwd
+#	ls
     echo "****************** BUILDING  ******************"
-	cd  ci-pipeline/tasks/build
+	cd  ../ci-pipeline/tasks/build
 	pwd
+	ls
     echo "BUILDING terraform init..."
     terraform init
     echo "BUILDING  terraform plan......."
