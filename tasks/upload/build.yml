@@ -12,8 +12,5 @@ inputs:
 outputs:
   - name: build
 
-caches:
-  - path: graphql-src/.m2
-
 run:
   path: ci-pipeline/tasks/upload/build.sh
