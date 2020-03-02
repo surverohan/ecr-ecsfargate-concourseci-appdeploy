@@ -41,15 +41,14 @@ pwd
     echo "BUILDING terraform init..."
     terraform init
     echo "BUILDING  terraform plan......."
-	terraform plan -var-file="terraform.tfvars"
+#	terraform plan -var-file="terraform.tfvars"
     echo "BUILDING  terraform apply..............."
-	terraform apply -auto-approve -var-file="terraform.tfvars"
+#	terraform apply -auto-approve -var-file="terraform.tfvars"
 	echo "BUILDING  terraform apply done !!!!!!!!!!!!!!!!!!!!!!!!"
 	
 	
 	pwd
-# Fail fast
-set -e
+
 
 # This is the order of arguments
 build_folder= .
@@ -58,7 +57,6 @@ aws_region=us-east-1
 AWS_KEY=AKIARD4KESXLKY4HA4WW
 AWS_SECRET=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
 
-build_folder= .
 
 echo " current pwd"
 pwd
