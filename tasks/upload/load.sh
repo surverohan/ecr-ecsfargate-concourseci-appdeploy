@@ -11,6 +11,9 @@ AWS_KEY=$4
 AWS_SECRET=$5
 
 
+build_folder=ci-pipeline/tasks/build
+
+
 echo " current pwd"
 pwd
 
