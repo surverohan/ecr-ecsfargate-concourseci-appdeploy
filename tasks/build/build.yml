@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: {{repository: maven,repository: hashicorp/terraform}}
-    tag: {{3.5.0-jdk-8-alpine,"light"}}
+    repository: {{maven},{hashicorp/terraform}}
+    tag: {{3.5.0-jdk-8-alpin0e},{"light"}}
 
 inputs:
   - name: ci-pipeline
