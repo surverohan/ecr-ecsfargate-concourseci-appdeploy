@@ -10,23 +10,18 @@ aws_region=$3
 AWS_KEY=$4
 AWS_SECRET=$5
 
-
-build_folder=ci-pipeline/tasks/build
-
+build_folder= .
 
 echo " current pwd"
 pwd
 
-echo " build file contents"
-$build_folder
+
 
 ls -ltr $build_folder
 
-#cp ci-pipeline/tasks/build/dockerfile  $build_folder
 
 echo "final build file contents"
 
-ls -ltr $build_folder
 
 # Login to AWS ECR process
 aws configure set aws_access_key_id $AWS_KEY
