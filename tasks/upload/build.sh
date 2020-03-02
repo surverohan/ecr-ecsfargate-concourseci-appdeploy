@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "invoking upload to ecr process ......"
 # Check that the application environment is set
 if [ ! -n "${ENVIRONMENT_NAME}" ]; then
     echo "The ENVIRONMENT_NAME environment variable must be set"

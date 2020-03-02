@@ -18,4 +18,4 @@ caches:
 
 
 run:
-  path: ci-pipeline/tasks/build/build.sh
+  path: ci-pipeline/tasks/upload/build.sh
