@@ -8,6 +8,14 @@ mvn package -Dmaven.repo.local=.m2
 cp target/*.jar ../build/graphql-poc.jar
 	pwd
 	ls
+	cd ../
+	
+	pwd
+	ls
+	cd ../
+
+	pwd
+	ls
     cd ../build/
 	pwd
 	ls
