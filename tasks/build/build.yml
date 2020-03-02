@@ -3,9 +3,9 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: { repository: {maven,hashicorp/terraform}, tag: {3.5.0-jdk-8-alpine,light} }
+  source: {repository: hashicorp/terraform, tag: "light"}
   
-  
+
 inputs:
   - name: ci-pipeline
   - name: graphql-src
