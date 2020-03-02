@@ -70,7 +70,7 @@ aws configure set default.region $aws_region
 aws configure set default.output json
 
 login="$(aws ecr get-login --no-include-email --region us-east-1)"
-${login}
+#${login}
 
 echo "AWS ECR LOGIN SUCCESSFULLY*******"
 # Login to AWS ECR process
