@@ -1,0 +1,12 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: hashicorp/terraform, tag: "light"}
+
+inputs:
+  - name: ci-pipeline
+  
+run:
+  path: ci-pipeline/tasks/terraform/terraform.sh

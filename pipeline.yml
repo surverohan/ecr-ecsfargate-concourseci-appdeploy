@@ -11,8 +11,26 @@ resources:
     source:
       uri: https://github.com/surverohan/graphqlc.git
       branch: master
+      
+  - name: graphql-artifact
+    type: s3
+    source:
+      bucket: s3-graphql-bucket
+      region_name: us-east-1
+      versioned_file: graphql-poc.jar
+      access_key_id: ((aws-key-id))
+      secret_access_key: ((aws-access-key))
 
 jobs:
+
+ - name: build-s3
+    plan:
+      - aggregate:
+        - get: ci-pipeline
+          trigger: true
+      - task: terraform
+        file: ci-pipeline/tasks/terraform/terraform.yml
+        
   - name: build-graphql-app-load2-ECR
     build_logs_to_retain: 30
     plan:
@@ -45,5 +63,6 @@ jobs:
 groups:
   - name: graphql-app
     jobs:
+      - build-s3
       - build-graphql-app-load2-ECR
       - deploy-graphql-app-2ECS
