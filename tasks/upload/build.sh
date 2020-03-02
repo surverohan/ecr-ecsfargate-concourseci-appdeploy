@@ -4,8 +4,15 @@ echo "invoking upload to ecr process ......"
 
 pwd
 	ls
-	
-cp graphql-artifact/*.jar /ci-pipeline/tasks/upload/graphql-poc.jar
+
+cd graphql-artifact
+
+echo "new path ......"
+
+pwd
+ls
+
+cp *.jar /ci-pipeline/tasks/upload/graphql-poc.jar
 
 pwd
 	ls
