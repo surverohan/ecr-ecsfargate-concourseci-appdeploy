@@ -1,0 +1,49 @@
+---
+resources:
+  - name: ci-pipeline
+    type: git
+    source:
+      uri: https://github.com/surverohan/ecr-ecsfargate-concourseci-appdeploy.git
+      branch: master
+
+  - name: graphql-src
+    type: git
+    source:
+      uri: https://github.com/surverohan/graphqlc.git
+      branch: master
+
+jobs:
+  - name: build-graphql-app-load2-ECR
+    build_logs_to_retain: 30
+    plan:
+      - aggregate:
+        - get: ci-pipeline
+        - get: graphql-src
+          trigger: true
+      - task: build
+        file: ci-pipeline/tasks/build/build.yml
+      - put: graphql-artifact
+        params:
+          file: build/graphql-poc.jar
+          name: graphql-poc.jar
+
+  - name: deploy-graphql-app-2ECS
+    serial: true
+    plan:
+      - aggregate:
+        - get: ci-pipeline
+          passed:
+            - build-graphql-app-load2-ECR
+          trigger: true
+      - task: deploy
+        file: ci-pipeline/tasks/deploy/deploy.yml
+        params:
+          APPLICATION_NAME: graphql-app
+          ENVIRONMENT_NAME: graphql-env
+          CNAME: graphql-env
+
+groups:
+  - name: graphql-app
+    jobs:
+      - build-graphql-app-load2-ECR
+      - deploy-graphql-app-2ECS
