@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pwd
 # Fail fast
 set -e
 
