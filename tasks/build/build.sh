@@ -6,7 +6,8 @@ pushd graphql-src/
 
 mvn package -Dmaven.repo.local=.m2
 cp target/*.jar ../build/graphql-poc.jar
-
+	pwd
+	ls
     cd ../build/
 	pwd
 	ls
