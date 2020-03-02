@@ -11,7 +11,8 @@ cp target/*.jar ../build/graphql-poc.jar
 	pwd
 	ls
     echo "****************** BUILDING  ******************"
-	cd  ci-pipeline/tasks/terraform
+	cd  ci-pipeline/tasks/build
+	pwd
     echo "BUILDING terraform init..."
     terraform init
     echo "BUILDING  terraform plan......."
