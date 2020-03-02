@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 pwd
 # Fail fast
 set -e
@@ -15,10 +15,11 @@ echo " current pwd"
 pwd
 
 echo " build file contents"
+$build_folder
 
 ls -ltr $build_folder
 
-cp ci-pipeline/tasks/build/dockerfile  $build_folder
+#cp ci-pipeline/tasks/build/dockerfile  $build_folder
 
 echo "final build file contents"
 
