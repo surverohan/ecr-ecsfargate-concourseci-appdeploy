@@ -39,7 +39,7 @@ pwd
 	pwd
 	ls
     echo "BUILDING terraform init..."
-    terraform init
+ #   terraform init
     echo "BUILDING  terraform plan......."
 #	terraform plan -var-file="terraform.tfvars"
     echo "BUILDING  terraform apply..............."
@@ -51,7 +51,6 @@ pwd
 
 
 # This is the order of arguments
-build_folder= .
 aws_ecr_repository_url_with_tag=077062247894.dkr.ecr.us-east-1.amazonaws.com/poctest:0.0.2
 aws_region=us-east-1  
 AWS_KEY=AKIARD4KESXLKY4HA4WW
@@ -60,11 +59,6 @@ AWS_SECRET=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
 
 echo " current pwd"
 pwd
-
-
-
-ls -ltr $build_folder
-
 
 echo "final build file contents"
 
@@ -101,7 +95,7 @@ which docker > /dev/null && docker ps > /dev/null || { echo 'ERROR: docker is no
 echo "tag $aws_ecr_repository_url_with_tag from $build_folder/Dockerfile"
 
 # Build image
-docker build -t $aws_ecr_repository_url_with_tag $build_folder
+docker build -t $aws_ecr_repository_url_with_tag .
 
 # docker tag $build_folder $aws_ecr_repository_url_with_tag
 
