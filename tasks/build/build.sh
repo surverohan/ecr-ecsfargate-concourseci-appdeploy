@@ -4,7 +4,7 @@ terraform --version
 
 mvn --version
 
-set -euxo pipefail
+#set -euxo pipefail
 
 pushd graphql-src/
 
