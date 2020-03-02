@@ -1,6 +1,6 @@
 #!/bin/bash
 
-terraform --version
+#terraform --version
 
 mvn --version
 
