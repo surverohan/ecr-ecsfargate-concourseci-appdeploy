@@ -3,8 +3,8 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: hashicorp/terraform, tag: "light"}
-  
+  source: { repository: maven, tag: 3.5.0-jdk-8-alpine }
+
 inputs:
   - name: ci-pipeline
   - name: graphql-artifact
