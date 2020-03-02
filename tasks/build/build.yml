@@ -4,8 +4,6 @@ platform: linux
 image_resource:
   type: docker-image
   source: { repository: maven, tag: 3.5.0-jdk-8-alpine }
-  type: docker-image
-  source: {repository: hashicorp/terraform, tag: "light"}
   
 
 inputs:

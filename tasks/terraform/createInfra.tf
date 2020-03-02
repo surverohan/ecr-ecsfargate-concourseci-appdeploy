@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "s3-graphql-bucket"
+  bucket = "s3-graphql-bucket1"
   acl = "private"
   
   versioning {
