@@ -1,5 +1,23 @@
 #!/bin/bash
 
+set -e
+
+if [ ! -z ${DEBUG_MODE} ]
+then
+  if [ ${DEBUG_MODE} = "true" ]
+  then
+    echo "DEBUG MODE"
+    set -x
+  fi
+fi
+
+RED='\033[0;31m'
+
+
+
+# "Building" terraform
+export TF_IN_AUTOMATION="true"
+
 echo "invoking upload to ecr process ......"
 
 pwd
