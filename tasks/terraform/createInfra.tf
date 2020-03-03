@@ -1,9 +1,9 @@
-resource "aws_ecr_repository" "ecr_service" {
- name = "poctest"
-}
+#resource "aws_ecr_repository" "ecr_service" {
+# name = "poctest"
+#}
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "s3-graphql-bucket6"
+  bucket = "s3-graphql-bucket1"
   acl = "private" 
   
   versioning {
