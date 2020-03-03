@@ -7,7 +7,6 @@ image_resource:
 
 inputs:
   - name: ci-pipeline
-  - name: graphql-artifact
 
 run:
   path: ci-pipeline/tasks/deploy/deploy.sh
