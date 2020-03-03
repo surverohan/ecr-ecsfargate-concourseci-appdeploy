@@ -88,7 +88,7 @@ which aws > /dev/null || { echo 'ERROR: aws-cli is not installed' ; exit 1; }
 
 # Connect into aws
 #$(aws ecr get-login --no-include-email $aws_extra_flags) || { echo 'ERROR: aws ecr login failed' ; exit 1; }
-aws ecr get-login --no-include-email us-east-1
+aws ecr get-login --no-include-email --region us-east-1
 
 
 # Check that docker is installed and running
