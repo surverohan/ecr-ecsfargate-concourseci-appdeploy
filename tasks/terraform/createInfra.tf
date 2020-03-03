@@ -1,7 +1,7 @@
 provider "aws" { 
+  region = "us-east-1"
   access_key = "AKIA5A6WR4FYPY2ATB4F"
   secret_key = "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"
-  region = "us-east-1"
 }
 
 
@@ -10,8 +10,9 @@ resource "aws_ecr_repository" "ecr_service" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "s3-graphql-bucket1"
+  bucket = "s3-graphql-bucket6"
   acl = "private" 
+  
   versioning {
     enabled = true
   }
