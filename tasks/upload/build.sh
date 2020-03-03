@@ -53,8 +53,8 @@ pwd
 # This is the order of arguments
 aws_ecr_repository_url_with_tag=022321687700.dkr.ecr.us-east-1.amazonaws.com/poctest:0.0.2
 aws_region=us-east-1  
-AWS_KEY=AKIARD4KESXLKY4HA4WW
-AWS_SECRET=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
+AWS_KEY=AKIAQKMTZ5SKEJLTXHMH
+AWS_SECRET=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
 
 
 echo " current AWS_SECRET"
