@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
@@ -58,7 +58,7 @@ AWS_SECRET=5OjDdV1bhu2/Hic+dCsDGBef5Md6CNUd9I/vCZ5B
 
 
 echo " current AWS_SECRET"
-$AWS_SECRET
+#$AWS_SECRET
 echo "final build file contents"
 
 
