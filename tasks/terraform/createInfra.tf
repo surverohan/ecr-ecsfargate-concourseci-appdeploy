@@ -1,7 +1,7 @@
 provider "aws" { 
   region = "us-east-1"
-  access_key = "AKIARD4KESXLKY4HA4WW"
-  secret_key = "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"
+  access_key = "AKIAQKMTZ5SKEJLTXHMH"
+  secret_key = "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"
 }
 
 resource "aws_s3_bucket" "bucket" {
@@ -26,4 +26,8 @@ resource "aws_s3_bucket" "bucket" {
       storage_class = "GLACIER"
     }
   }
+}
+
+resource "aws_ecr_repository" "ecr_service" {
+ name = "poctest"
 }
