@@ -18,7 +18,7 @@ RED='\033[0;31m'
 # "Building" terraform
 export TF_IN_AUTOMATION="true"
 
-echo "invoking upload to ecr process ......"
+echo "invoking upload to ecr process 2......"
 
 pwd
 	ls
