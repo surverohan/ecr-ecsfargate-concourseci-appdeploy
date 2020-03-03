@@ -39,12 +39,12 @@ pwd
 	pwd
 	ls
     echo "BUILDING terraform init..."
-#    terraform init
+   terraform init
     echo "BUILDING  terraform plan......."
-#	terraform plan -var-file="terraform.tfvars"
+	terraform plan -var-file="terraform.tfvars"
     echo "BUILDING  terraform apply..............."
 	terraform apply -auto-approve -var-file="terraform.tfvars"
-#	echo "BUILDING  terraform apply done !!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "BUILDING  terraform apply done !!!!!!!!!!!!!!!!!!!!!!!!"
 	
 	
 	pwd
