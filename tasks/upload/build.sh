@@ -51,7 +51,7 @@ pwd
 
 
 # This is the order of arguments
-aws_ecr_repository_url_with_tag=022321687700.dkr.ecr.us-east-1.amazonaws.com/poctest:0.0.2
+aws_ecr_repository_url_with_tag=895413772656.dkr.ecr.us-east-1.amazonaws.com/poctest:0.0.2
 aws_region=us-east-1  
 AWS_KEY=AKIAQKMTZ5SKEJLTXHMH
 AWS_SECRET=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
@@ -73,7 +73,6 @@ aws --version
 login="$(aws ecr get-login --no-include-email --region us-east-1)"
 #${login}
 
-echo "AWS ECR LOGIN SUCCESSFULLY*******"
 # Login to AWS ECR process
 
 # Allow overriding the aws region from system
@@ -89,7 +88,10 @@ which aws > /dev/null || { echo 'ERROR: aws-cli is not installed' ; exit 1; }
 # Connect into aws
 #$(aws ecr get-login --no-include-email $aws_extra_flags) || { echo 'ERROR: aws ecr login failed' ; exit 1; }
 aws ecr get-login --no-include-email --region us-east-1
+echo "AWS ECR LOGIN SUCCESSFULLY*******"
+docker --version
 
+sudo service docker start
 
 # Check that docker is installed and running
 which docker > /dev/null && docker ps > /dev/null || { echo 'ERROR: docker is not running' ; exit 1; }
