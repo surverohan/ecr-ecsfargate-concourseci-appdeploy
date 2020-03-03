@@ -6,12 +6,10 @@ provider "aws" {
 
 resource "aws_s3_bucket" "bucket" {
   bucket = "s3-graphql-bucket1"
-  acl = "private"
-  
+  acl = "private" 
   versioning {
     enabled = true
   }
-
   lifecycle_rule {
     enabled = true
 	prefix = "test-scripts"
