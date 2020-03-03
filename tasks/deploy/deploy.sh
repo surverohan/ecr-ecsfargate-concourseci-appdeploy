@@ -17,7 +17,7 @@ RED='\033[0;31m'
 export TF_IN_AUTOMATION="true"
 errors=0
    echo "****************** BUILDING  ******************"
-	cd  ci-pipeline/tasks/terraform
+	cd  ci-pipeline/tasks/deploy
     echo "BUILDING terraform init..."
     terraform init
     echo "BUILDING  terraform plan......."
